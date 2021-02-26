@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+main {
+    padding-top: 58px;
+    height: 100%;
+}
+
+main header {
+    position: relative;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 40px;
+    -webkit-animation-name: animateHeader;
+    -webkit-animation-duration: 0.8s;
+    animation-name: animateHeader;
+    animation-duration: 0.8s;
+}
+
+@-webkit-keyframes animateHeader {
+    from{top:-50px; opacity:0}
+    to{top:0px; opacity:1}
+}
+
+@keyframes animateHeader {
+    from{top:-50px; opacity:0}
+    to{top:0px; opacity:1}
+}
+
+main {
+    left:0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    -webkit-animation-name: animateMain;
+    -webkit-animation-duration: 0.8s;
+    animation-name: animateMain;
+    animation-duration: 0.8s;
+}
+
+@-webkit-keyframes animateMain {
+    from{opacity:0}
+    to{opacity:1}
+}
+
+@keyframes animateMain {
+    from{opacity:0}
+    to{opacity:1}
+}
+
+text {
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.notes rect {
+    fill: #7acf48;
+    fill-opacity: 0;
+    opacity: 0;
+    stroke: black;
+    stroke-width: 1px;
+    rx: 3px;
+}
+
+.notes rect:hover, .notes .active {
+    fill-opacity: 0.3;
+    opacity: 1;
+    cursor: pointer;
+}
+
+#tab-navigation {
+    position: fixed;
+    left: 10%;
+    top: 300px;
+    height: 200px;
+    width: 50px;
+}
+
+#tab-navigation img {
+    display: block;
+    width: 30px;
+    margin: 20px;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+    opacity: 0.5;
+    border: 1px solid gray;
+    border-radius: 50px;
+}
+
+#tab-navigation img:hover {
+    opacity: 1;
+}
+
+#marker {
+    fill: #7acf48;
+    rx: 5px;
+    fill-opacity: 0.5;
+}

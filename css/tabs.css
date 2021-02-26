@@ -1,0 +1,158 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+main {
+    padding-top: 58px;
+    height: 100%;
+    /* overflow-y: scroll; */
+}
+
+main header {
+    position: relative;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 40px;
+    -webkit-animation-name: animateHeader;
+    -webkit-animation-duration: 0.8s;
+    animation-name: animateHeader;
+    animation-duration: 0.8s;
+}
+
+@-webkit-keyframes animateHeader {
+    from{top:-50px; opacity:0}
+    to{top:0px; opacity:1}
+}
+
+@keyframes animateHeader {
+    from{top:-50px; opacity:0}
+    to{top:0px; opacity:1}
+}
+
+main section {
+    left:0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+main section ol li {
+    position: 'relative';
+    font-size: 22px;
+    font-weight: bold;
+    display: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 5%;
+    padding-right: 5%;
+    -webkit-animation-name: animateTab;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animateTab;
+    animation-duration: 0.8s;
+}
+
+main section ol li img {
+    float: right;
+    margin-left: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+@-webkit-keyframes animateTab {
+    from{top:-20px; opacity:0}
+    to{top:0px; opacity:1}
+}
+
+@keyframes animateTab {
+    from{top:-20px; opacity:0}
+    to{top:0px; opacity:1}
+}
+
+#msg {
+    display: none;
+    text-align: center;
+    position: relative;
+    font-size: 44px;
+    /* margin-top: 200px; */
+    -webkit-animation-name: animateHeader;
+    -webkit-animation-duration: 0.8s;
+    animation-name: animateHeader;
+    animation-duration: 0.8s;
+}
+
+
+#delete span {
+    display: block;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#yes-btn, #no-btn {
+    width: 120px;
+    height: 30px;
+    font-size: 22px;
+    border-radius: 5px;
+    border: 0px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+#yes-btn {
+    margin-right: 5%;
+    background-color: #c0c0c0;
+    
+}
+
+#yes-btn:hover {
+    background-color: #d0d0d0;
+    cursor: pointer;
+}
+
+#yes-btn:active {
+    background-color: #a0a0a0;
+    outline: none;
+}
+
+#yes-btn:focus {
+    outline: none;
+}
+
+#no-btn {
+    margin-left: 5%;
+    background-color: #7acf48;
+}
+
+#no-btn:hover {
+    background-color: #8adf58;
+    cursor: pointer;
+}
+
+#no-btn:active {
+    background-color: #3a8f08;
+    outline: none;
+}
+
+#no-btn:focus {
+    outline: none;
+}
+
+@-webkit-keyframes animatetop {
+    from {top:-100px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-100px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+

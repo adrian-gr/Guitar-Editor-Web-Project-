@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            fetch('../php/checkLoginStatus.php')
+            .then(response => response.json())
+            .then(isset => {
+                if (!isset) {
+                    document.location.assign('./homepage.html');
+                }
+            });
+        </script>
+        <link rel="stylesheet" href="../css/logged-nav.css">
+        <link rel="stylesheet" href="../css/tabs.css">
+        <script defer src="../javascript/logged-homepage.js"></script>
+        <script defer src="../javascript/tabs.js"></script>
+        <script defer src="../javascript/Tab.js"></script>
+        <script defer src="../javascript/play-tab.js"></script>
+        <title>My Tabs | Guitar Editor</title>
+    </head>
+    <body>
+        <nav id='main-navigation'>
+            <a id="home" href="../html/logged-homepage.html">Guitar Editor</a>
+            <span id="create-new-tab">Create New Tab</span>
+            <span id="my-tabs">My Tabs</span>
+            <span id="logout">Log Out</span>
+        </nav>
+
+        <div class='modal'>
+            <section>
+                <h1>Create New Tab</h1>
+                <span id='create-new-tab-error'>Tab already exists!</span>
+                <form id='create-new-tab-form' method='POST' action='../php/createNewTab.php' autocomplete="off">
+                    <input type='text' placeholder='Tab Title' id='tab-title'/>
+                    <input id="create" type="submit" value="Create"/>
+                </form>
+            </section>
+        </div>
+
+        <main>
+            <header>
+                <h1>My Tabs</h1>
+            </header>
+            <section id='tabs-section'>
+                <div class='modal'>
+                    <section id='delete'>
+                        <form id='delete-form' method='POST' action="../php/removeTab.php">
+                            <span id='delete-msg'></span>
+                            <input type='submit' id='yes-btn' value='Yes'/>
+                            <input type='submit' id='no-btn' value='No'/>
+                        </form>
+                    </section>
+                </div>
+
+            </section>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="../css/logged-nav.css">
+        <link rel="stylesheet" href="../css/edit-tabs.css">
+        <script src='../javascript/Tab.js'></script>
+        <script defer src="../javascript/logged-homepage.js"></script>
+        <script defer src="../javascript/edit-tab.js"></script>
+        <script defer src="../javascript/play-tab.js"></script>
+    </head>
+    <body>
+        <nav id='main-navigation'>
+            <a id="home" href="../html/logged-homepage.html">Guitar Editor</a>
+            <span id="create-new-tab">Create New Tab</span>
+            <span id="my-tabs">My Tabs</span>
+            <span id="logout">Log Out</span>
+        </nav>
+        <div class='modal'>
+            <section>
+                <h1>Create New Tab</h1>
+                <span id='create-new-tab-error'>Tab already exists!</span>
+                <form id='create-new-tab-form' method='POST' action='../php/createNewTab.php' autocomplete="off">
+                    <input type='text' placeholder='Tab Title' id='tab-title'/>
+                    <input id="create" type="submit" value="Create"/>
+                </form>
+            </section>
+        </div>
+        <main>
+            <header>
+                <h1 id='title'></h1>
+            </header>
+            <nav id='tab-navigation'>
+                <img src='../play.png' id='play-pause'>
+                <img src='../save.png' id='save'>
+                <img src='../export.ico' id='export'>
+                <img src='../import.ico' id='import'>
+            </nav>
+            <section>
+                <svg width='100%' height='0px'></svg>
+            </section>
+        </main>
+    </body>
+</html>

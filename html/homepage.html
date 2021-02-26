@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            fetch('../php/checkLoginStatus.php')
+            .then(response => response.json())
+            .then(isset => {
+                if (isset) {
+                    document.location.assign('./logged-homepage.html');
+                }
+            });
+        </script>
+        <title>Guitar Editor</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/homepage.css">
+        <script defer src='../javascript/homepage.js'></script>
+    </head>
+    <body>
+        
+        <nav>
+            <a id="home" href="./homepage.html">Guitar Editor</a>
+            <span id="register">Register</span>
+            <span id="login">Log In</span>
+        </nav>
+        <header>
+            <h1>Welcome to Guitar Editor!</h1>
+        </header>
+
+        <div class="modal">
+            <section id="login-section">
+                <h1>Log In</h1>
+                <form method="POST" action="../php/login.php" autocomplete="off" id="login-form">
+                    <span id="login-error">Wrong username or password!</span>
+                    <input type="text" placeholder="Username" id="login-username"/>
+                    <input type="password" placeholder="Password" id="login-password"/>
+                    <input id="login-btn" type="submit" value="Log In">
+                </form>
+            </section>
+        </div>
+
+        <div class="modal">
+            <section id="register-section">
+                <h1>Register</h1>
+                <form method="POST" action="../php/register.php" autocomplete="off" id="register-form">
+                    <span id="register-error">Accounts already exists!</span>
+                    <input type="text" placeholder="Username" id="register-username"/>
+                    <input type="password" placeholder="Password" id="register-password"/>
+                    <input type="password" placeholder="Confirm password" id="register-confirm-password"/>
+                    <input id="register-btn" type="submit" value="Register">
+                </form>
+            </section>
+        </div>
+    </body>
+</html>
