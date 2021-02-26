@@ -1,3 +1,3 @@
-# Guitar-Editor-Web-Project-
-FMI Web course final project
+# Guitar Editor Web Project
 
+FMI Web course final project. Edit and play guitar tabs.
